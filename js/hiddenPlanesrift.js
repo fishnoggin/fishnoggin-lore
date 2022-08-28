@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 function planesriftSetPasskey(newKey){
-	localStorage.setItem("planesriftPasskey", newKey);
+	localStorage.setItem("planesriftPasskey", newKey.toLowerCase());
 	logPasskey();
 }
 
@@ -35,7 +35,11 @@ function updateVisibility(){
 			hid[i].style.display = displayType;
 		}
 
-		if (passkey == "Leroy Jankins" && hid[i].classList.contains("marwen")) {
+		if (passkey == "leroy jankins" && hid[i].classList.contains("marwen")) {
+			hid[i].style.display = displayType;
+		}
+
+		if (passkey == "open sesame" && hid[i].classList.contains("anna")) {
 			hid[i].style.display = displayType;
 		}
 	}
