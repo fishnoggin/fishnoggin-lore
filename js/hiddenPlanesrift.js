@@ -27,5 +27,9 @@ function updateVisibility(){
 		if (passkey == "mageslayer" && hid[i].classList.contains("azmira")) {
 			hid[i].style.visibility = 'visible';
 		}
+
+		if (passkey == "Leroy Jankins" && hid[i].classList.contains("marwen")) {
+			hid[i].style.visibility = 'visible';
+		}
 	}
 }
