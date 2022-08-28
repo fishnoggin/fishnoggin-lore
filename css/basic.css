@@ -1,0 +1,119 @@
+body{
+	margin: 60px;
+	
+	background-position: center;
+	background-repeat: no-repeat;
+  	background-size: cover;
+
+	background-color: black;
+	color: white;
+	
+	font-family: nocturne-serif-lights, serif;
+	font-weight: 400;
+	font-style: normal;
+
+	text-shadow: 0px 0px 5px black;
+}
+
+h1{
+	font-family: nocturne-serif, serif;
+	font-weight: 400;
+	font-style: normal;
+	font-variant: small-caps;
+}
+
+#titleDivider{
+	width: 100%;
+	margin-left: -60px;
+	margin-top: -60px;
+	margin-bottom: -40px;
+	padding: 0px;
+	
+}
+
+h2{
+	font-family: nocturne-serif, serif;
+	font-weight: 400;
+	font-style: normal;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+
+h3{
+	font-family: nocturne-serif, serif;
+	font-weight: 400;
+	font-style: normal;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+
+p{
+	line-height: 1.5;
+}
+
+a{
+	color: aliceblue;
+	text-decoration-thickness: 1px;
+}
+
+
+.hidden{
+	visibility: hidden;
+	text-shadow: 0px 0px 8px #abd;
+	opacity: 75%;
+} .hidden a{
+	color: #bcf;
+}
+
+
+input{
+	font-family: nocturne-serif-lights, serif;
+	background-color: #0003;
+	padding: 6px;
+	margin-left: 20px;
+	border-style: none;
+	border-bottom: 2px solid white;
+	border-radius: 4px;
+	color: white;
+}
+
+.clickableIcon{
+	opacity: 50%;
+	transition: opacity .5s;
+}
+.clickableIcon:hover{
+	opacity: 100%;
+}
+
+.bulletpoint{
+	height: 16px;
+}
+
+
+
+
+
+
+.hasTooltip .tooltip{
+	visibility: hidden;
+	opacity: 0%;
+	color: white;
+	background-color: #0008;
+	text-align: center;
+	padding: 6px;
+	border-radius: 4px;
+
+	position: absolute;
+}
+
+.hasTooltip:hover .tooltip{
+	visibility: visible;
+	opacity: 100%;
+	transition: opacity 2s;
+}
