@@ -22,14 +22,14 @@ function updateVisibility(){
 	passkey = localStorage.planesriftPasskey;
 	for (var i = hid.length - 1; i >= 0; i--) {
 		if (passkey == "shalogorot") {
-			hid[i].style.visibility = 'visible';
+			hid[i].style.display = 'inherit';
 		}
 		if (passkey == "mageslayer" && hid[i].classList.contains("azmira")) {
-			hid[i].style.visibility = 'visible';
+			hid[i].style.display = 'inherit';
 		}
 
 		if (passkey == "Leroy Jankins" && hid[i].classList.contains("marwen")) {
-			hid[i].style.visibility = 'visible';
+			hid[i].style.display = 'inherit';
 		}
 	}
 }
