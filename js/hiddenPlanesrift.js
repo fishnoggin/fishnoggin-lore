@@ -39,7 +39,7 @@ function updateVisibility(){
 			hid[i].style.display = displayType;
 		}
 
-		if (passkey == "open sesame" && hid[i].classList.contains("anna")) {
+		if (passkey == "open sesame" && hid[i].classList.contains("eve")) {
 			hid[i].style.display = displayType;
 		}
 	}
