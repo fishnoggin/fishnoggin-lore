@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/basic.css">
+	<title>HOME</title>
+	<link rel="icon" type="image/x-icon" href="../images/search_icon_dark.png">
+
+	<style>
+		body {
+			background-image: url('../images/page_bg_gradient.png');
+		}
+	</style>
+
+</head>
+<body>
+
+    <h1>
+		Magi Spell DC Calculator
+	</h1>
+	
+	<div id="titleDivider">
+		<img src="../images/page corner.png" style="height: 40px; width: auto; margin: 0px; margin-bottom: -5px; transform: rotate(90deg);">
+		<div style="width: 100%; height: 2px; margin: 0px; background-image: linear-gradient(to right, white, #fff0);"></div>
+		<img src="../images/page corner.png" style="height: 40px; width: auto; margin: 0px;  transform: rotate(180deg);">
+	</div>
+
+    <blockquote>
+        <h3>A calculator for tracking the Arcane Instability DC of DrRandom's Magi class.</h3>
+    </blockquote>
+
+    <br>
+
+    <div style="width: 100%; text-align: center;">
+    <div style="display: inline-flex; flex-direction: column; align-items: center; padding: 50px; width: auto; background-image: url(calculator_frame.png); background-size: contain; background-position: center; background-repeat: no-repeat;">
+        <div style="display: flex; align-items: center; justify-content: center; column-gap: 30px;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h2 style="margin: 0;">Arcane Instability DC:</h2>
+                <h1 style="font-size: 48pt; margin: 0;  font-variant: normal;" id="spellDC">13</h1>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <h2 style="margin: 0;">Backlash Damage:</h2>
+                <h1 style="font-size: 48pt; margin: 0; font-variant: normal;" id="backlash">1d4</h1>
+            </div>
+        </div>
+        <br>
+
+        <table style="text-align: center;">
+            <tr>
+                <th>Spell Level</th>
+                <th>Current Base DC</th>
+                <th>Base DC Adjustment</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="number" max="9" min="0" value="1" style="margin-left: 6px;" id="spellLevel" onclick="update()"></td>
+                <td id="baseDC">12</td>
+                <td id="newDC">+3 &nbsp; &nbsp; (15)</td>
+                <td><input type="button" class="button" value="cast" style="margin-left: 6px;" onclick="cast()"></td>
+            </tr>
+            <tr style="height: 20px;"></tr>
+            <tr>
+                <td>Mastery Spell</td>
+                <th>Last Spell Cast</th>
+                <td>Manual DC Adjust</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" value="false" style="margin-left: 6px;" onclick="update()" id="masterySpell"></td>
+                <td><input type="number" max="9" min="0" value="0" id="lastSpell" onclick="update()"></td>
+                <td><input type="button" class="button" value="-" style="margin-left: 6px;" onclick="manual(-1)"><input type="button" class="button" value="+" style="margin-left: 6px;" onclick="manual(1)"></td>
+                <td><input type="button" class="button" value="reset" onclick="reset()"></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+
+<script src="../js/pageUpdate.js"></script>
+<script src="magi_calculator.js"></script>
+
+</body>
+</html>
