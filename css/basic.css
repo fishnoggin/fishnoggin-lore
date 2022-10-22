@@ -101,6 +101,8 @@ a:hover{
 	opacity: 75%;
 } .hidden a{
 	color: #bcf;
+} .hidden ul{
+	list-style-type: circle;
 }
 
 
