@@ -15,7 +15,7 @@
 		#toolbar{
 			background-image: linear-gradient(transparent, black);
 			
-			position: absolute;
+			position: fixed;
 			bottom: 0px;
 			left: 0px;
 			width: 100%;
@@ -48,12 +48,7 @@
 	</div>
 
     <div id="editor" contenteditable="">
-        <h2>
-            header h2
-        </h2>
-        <p>
-            content here
-        </p>
+        
     </div>
 
 	<div id="toolbar">
@@ -75,6 +70,9 @@
 		</div>
 		<div>
 			<img class="format_icon" src="../images/search_icon.png" onclick="addSection('p')">
+		</div>
+		<div style="margin-left: 15px; margin-bottom: 5px;">
+			<a onclick="saveContent()" style="cursor: pointer;">Save!</a>
 		</div>
 	</div>
 

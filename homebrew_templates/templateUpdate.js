@@ -1,5 +1,19 @@
 editor = document.getElementById('editor');
 
+window.onload = function(){
+    var editorContent = localStorage.getItem("content");
+    if(editorContent){
+        editor.innerHTML = editorContent;
+    }else{
+        editor.innerHTML = '<h2>Sample Header</h2><p>Type content here...</p>';
+    }
+}
+
+function saveContent(){
+    localStorage.setItem("content", editor.innerHTML);
+}
+
+
 function addSection(input){
     var div = null;
     switch (input) {
