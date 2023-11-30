@@ -1,5 +1,7 @@
 editor = document.getElementById('editor');
 
+var active = null;
+
 window.onload = function(){
     var editorContent = localStorage.getItem("content");
     if(editorContent){
@@ -13,9 +15,9 @@ function saveContent(){
     localStorage.setItem("content", editor.innerHTML);
 }
 
-
+var div = null;
 function addSection(input){
-    var div = null;
+    
     switch (input) {
         case 'h1':
             div = document.createElement('h1');
@@ -50,5 +52,31 @@ function addSection(input){
         default:
             break;
     }
-    editor.appendChild(div);
+    div.contentEditable = "true";
+    addSection(div);
+}
+
+function addSection(newSection){
+    var active = window.getSelection().anchorNode;
+    
+    if (active.nextSibling) {
+        active.parentNode.insertBefore(newSection, active.nextSibling);
+      }
+      else {
+        active.parentNode.appendChild(newSection);
+      }
+}
+
+// deleting and keeping in short memory for undo
+
+var deleted = [];
+
+function sectionDelete(){
+    
+}
+
+function clearAll(){
+    while(editor.firstChild){
+        editor.removeChild(editor.lastChild);
+    }
 }
